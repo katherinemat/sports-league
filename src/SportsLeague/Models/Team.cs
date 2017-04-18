@@ -14,7 +14,6 @@ namespace SportsLeague.Models
         public int TeamId { get; set; }
         public string Players { get; set; }
         public string TeamCaptain { get; set; }
-        public int DivisionId { get; set; }
-        public virtual Division Division { get; set; }
+        public List<DivisionTeam>  DivisionTeams { get; set; }
     }
 }

@@ -12,9 +12,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Players)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Division.Name)
-            </th>
+            </th>*@
             <th></th>
         </tr>
 
@@ -24,14 +24,15 @@
                 <td>
                     @Html.DisplayFor(modelTeam => listTeam.Players)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelTeam => listTeam.Division.Name)
-                </td>
+                </td>*@
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = listTeam.TeamId }) |
                     @Html.ActionLink("Details", "Details", new { id = listTeam.TeamId }) |
                     @Html.ActionLink("Delete", "Delete", new { id = listTeam.TeamId })
                 </td>
+  
             </tr>
         }
     </table>

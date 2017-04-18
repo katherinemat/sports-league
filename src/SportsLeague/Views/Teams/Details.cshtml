@@ -7,7 +7,9 @@
 <body>
     <h2>Details</h2>
     <hr />
-    @Html.DisplayNameFor(model => model.Players): @Html.DisplayFor(model => model.Players)
+    <p>@Html.DisplayNameFor(model => model.Players): @Html.DisplayFor(model => model.Players)</p>
+    <p>@Html.DisplayNameFor(model => model.Division) : @ViewBag.Division.Name</p>
+
     <p>@Html.ActionLink("Back to Home Page", "Index")</p>
 </body>
 </html>
