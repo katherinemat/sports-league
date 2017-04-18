@@ -1,0 +1,27 @@
+﻿@model SportsLeague.Models.Team
+
+<html>
+<head>
+    <title>Team - Create</title>
+</head>
+<body>
+    <h2>Create a new team</h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Players)
+        @Html.EditorFor(model => model.Players)
+
+        @Html.LabelFor(model => model.TeamCaptain)
+        @Html.EditorFor(model => model.TeamCaptain)
+
+        @Html.LabelFor(model => model.DivisionId)
+        @Html.DropDownList("DivisionId")
+
+        <input type="submit" value="Create" class="btn btn-default" />
+    }
+
+    @Html.ActionLink("Back to Teams", "Index")
+</body>
+</html>

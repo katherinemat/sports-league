@@ -1,0 +1,13 @@
+﻿@model SportsLeague.Models.Team
+
+<html>
+<head>
+    <title>Team - Details</title>
+</head>
+<body>
+    <h2>Details</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Players): @Html.DisplayFor(model => model.Players)
+    <p>@Html.ActionLink("Back to Home Page", "Index")</p>
+</body>
+</html>

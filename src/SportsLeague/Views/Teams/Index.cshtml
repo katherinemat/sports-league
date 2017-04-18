@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SportsLeague.Models.Team>
+
+<html>
+<head>
+    <title>Sports League</title>
+</head>
+<body>
+    <h2>Sports League</h2>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Players)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Division.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var listTeam in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelTeam => listTeam.Players)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelTeam => listTeam.Division.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = listTeam.TeamId }) |
+                    @Html.ActionLink("Details", "Details", new { id = listTeam.TeamId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = listTeam.TeamId })
+                </td>
+            </tr>
+        }
+    </table>
+    <p>@Html.ActionLink("Add new item", "Create")</p>
+
+    
+</body>
+</html>
